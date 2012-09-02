@@ -1,0 +1,1 @@
+ ClassDecrypt1.Decrypt1(ConfigurationManager.ConnectionStrings["KDL"].ConnectionString,Resource1.StringLab)

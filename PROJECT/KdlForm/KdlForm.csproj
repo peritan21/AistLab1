@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5DA7684E-DB93-4C9B-9B79-7750BE29DEDA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KdlForm</RootNamespace>
+    <AssemblyName>KdlForm</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v11.1.Linq, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Tutorials.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v11.1.Design, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraWizard.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analizkrovi\FrmTromboelast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmTromboelast.Designer.cs">
+      <DependentUpon>FrmTromboelast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmAnalKrGlikemihPr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmAnalKrGlikemihPr.Designer.cs">
+      <DependentUpon>FrmAnalKrGlikemihPr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmGazuElektro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmGazuElektro.Designer.cs">
+      <DependentUpon>FrmGazuElektro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmGemostazio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmGemostazio.Designer.cs">
+      <DependentUpon>FrmGemostazio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmGrKrRezys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmGrKrRezys.Designer.cs">
+      <DependentUpon>FrmGrKrRezys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmIsSKrmetIFA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmIsSKrmetIFA.Designer.cs">
+      <DependentUpon>FrmIsSKrmetIFA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKoagylogramma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKoagylogramma.Designer.cs">
+      <DependentUpon>FrmKoagylogramma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrasnVolch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrasnVolch.Designer.cs">
+      <DependentUpon>FrmKrasnVolch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrBioxim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrBioxim.Designer.cs">
+      <DependentUpon>FrmKrBioxim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrCA125.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrCA125.Designer.cs">
+      <DependentUpon>FrmKrCA125.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrELI12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrELI12.Designer.cs">
+      <DependentUpon>FrmKrELI12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrELI24.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrELI24.Designer.cs">
+      <DependentUpon>FrmKrELI24.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrGemNizkogoUr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrGemNizkogoUr.designer.cs">
+      <DependentUpon>FrmKrGemNizkogoUr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrGemoliz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrGemoliz.Designer.cs">
+      <DependentUpon>FrmKrGemoliz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrGomocestin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrGomocestin.Designer.cs">
+      <DependentUpon>FrmKrGomocestin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrOb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrOb.Designer.cs">
+      <DependentUpon>FrmKrOb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrOsmotRezEritr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrOsmotRezEritr.Designer.cs">
+      <DependentUpon>FrmKrOsmotRezEritr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrPCRMutacii.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrPCRMutacii.designer.cs">
+      <DependentUpon>FrmKrPCRMutacii.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrSaxar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrSaxar.Designer.cs">
+      <DependentUpon>FrmKrSaxar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrTromboeks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrTromboeks.Designer.cs">
+      <DependentUpon>FrmKrTromboeks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrVich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmKrVich.Designer.cs">
+      <DependentUpon>FrmKrVich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmTestTolerantGlycoze .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\FrmTestTolerantGlycoze .Designer.cs">
+      <DependentUpon>FrmTestTolerantGlycoze .cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizMochi\FrmMochaObchii.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalizMochi\FrmMochaObchii.Designer.cs">
+      <DependentUpon>FrmMochaObchii.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizMochi\FrmMohaBiohim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalizMochi\FrmMohaBiohim.Designer.cs">
+      <DependentUpon>FrmMohaBiohim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizMochi\FrmMohasaharbelok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalizMochi\FrmMohasaharbelok.Designer.cs">
+      <DependentUpon>FrmMohasaharbelok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizMochi\FrmMohaSulkovich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalizMochi\FrmMohaSulkovich.Designer.cs">
+      <DependentUpon>FrmMohaSulkovich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizMochi\FrmMohaSutpbg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalizMochi\FrmMohaSutpbg.Designer.cs">
+      <DependentUpon>FrmMohaSutpbg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizMochi\FrmNechipor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalizMochi\FrmNechipor.Designer.cs">
+      <DependentUpon>FrmNechipor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizMochi\FrmTrixomonad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalizMochi\FrmTrixomonad.Designer.cs">
+      <DependentUpon>FrmTrixomonad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizMochi\FrmZimnickgo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalizMochi\FrmZimnickgo.Designer.cs">
+      <DependentUpon>FrmZimnickgo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizKala\FrmAnalKalUgkGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalizKala\FrmAnalKalUgkGrid.Designer.cs">
+      <DependentUpon>FrmAnalKalUgkGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizKala\FrmAnalKalUgl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalizKala\FrmAnalKalUgl.Designer.cs">
+      <DependentUpon>FrmAnalKalUgl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizKala\FrmCalglist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalizKala\FrmCalglist.Designer.cs">
+      <DependentUpon>FrmCalglist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizKala\FrmCalglistLINQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalizKala\FrmCalglistLINQ.Designer.cs">
+      <DependentUpon>FrmCalglistLINQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizKala\FrmIssledovKala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalizKala\FrmIssledovKala.Designer.cs">
+      <DependentUpon>FrmIssledovKala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizKala\FrmKalOstric.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalizKala\FrmKalOstric.Designer.cs">
+      <DependentUpon>FrmKalOstric.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizKala\FrmNovGemoglob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalizKala\FrmNovGemoglob.Designer.cs">
+      <DependentUpon>FrmNovGemoglob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassGrafiksReport.cs" />
+    <Compile Include="Krsuvorotka1\FrmKrantigomoniz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Krsuvorotka1\FrmKrantigomoniz.Designer.cs">
+      <DependentUpon>FrmKrantigomoniz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Krsuvorotka1\FrmKrantitelaigmigg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Krsuvorotka1\FrmKrantitelaigmigg.Designer.cs">
+      <DependentUpon>FrmKrantitelaigmigg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Krsuvorotka1\FrmKRopSMetelektUEFAstra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Krsuvorotka1\FrmKRopSMetelektUEFAstra.Designer.cs">
+      <DependentUpon>FrmKRopSMetelektUEFAstra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Krsuvorotka1\FrmKrSImmunIgAIgMIgGIgE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Krsuvorotka1\FrmKrSImmunIgAIgMIgGIgE.Designer.cs">
+      <DependentUpon>FrmKrSImmunIgAIgMIgGIgE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Krsuvorotka1\FrmKrSIssNarFerIFA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Krsuvorotka1\FrmKrSIssNarFerIFA.Designer.cs">
+      <DependentUpon>FrmKrSIssNarFerIFA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Krsuvorotka1\FrmKrSuvGormIFA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Krsuvorotka1\FrmKrSuvGormIFA.Designer.cs">
+      <DependentUpon>FrmKrSuvGormIFA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Krsuvorotka1\FrmKrSuvIfaXgch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Krsuvorotka1\FrmKrSuvIfaXgch.Designer.cs">
+      <DependentUpon>FrmKrSuvIfaXgch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maski\FrmEkcTrans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maski\FrmEkcTrans.Designer.cs">
+      <DependentUpon>FrmEkcTrans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maski\FrmMazkinaFloru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maski\FrmMazkinaFloru.Designer.cs">
+      <DependentUpon>FrmMazkinaFloru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mielogramma\FrmMielogramma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mielogramma\FrmMielogramma.Designer.cs">
+      <DependentUpon>FrmMielogramma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New2202\FrmBakteriosBiomat1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New2202\FrmBakteriosBiomat1.Designer.cs">
+      <DependentUpon>FrmBakteriosBiomat1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New2202\FrmCitokin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New2202\FrmCitokin.Designer.cs">
+      <DependentUpon>FrmCitokin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New2202\FrmDiagSifilisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New2202\FrmDiagSifilisa.Designer.cs">
+      <DependentUpon>FrmDiagSifilisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New2202\FrmImunTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New2202\FrmImunTest.Designer.cs">
+      <DependentUpon>FrmImunTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New2202\FrmLikvoraIssled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New2202\FrmLikvoraIssled.Designer.cs">
+      <DependentUpon>FrmLikvoraIssled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New2202\FrmOpAgrTrBioleLa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New2202\FrmOpAgrTrBioleLa.Designer.cs">
+      <DependentUpon>FrmOpAgrTrBioleLa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New2202\FrmSoskobHMatki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New2202\FrmSoskobHMatki.Designer.cs">
+      <DependentUpon>FrmSoskobHMatki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Posevu\FrmPosevGrib.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Posevu\FrmPosevGrib.Designer.cs">
+      <DependentUpon>FrmPosevGrib.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Testu_prochie\FrmChesotka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmChesotka.Designer.cs">
+      <DependentUpon>FrmChesotka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmAnSokProstat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmAnSokProstat.Designer.cs">
+      <DependentUpon>FrmAnSokProstat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmAspiratOnkolog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmAspiratOnkolog.Designer.cs">
+      <DependentUpon>FrmAspiratOnkolog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmCitogram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmCitogram.Designer.cs">
+      <DependentUpon>FrmCitogram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmPCRisledov.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmPCRisledov.designer.cs">
+      <DependentUpon>FrmPCRisledov.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmPunktOnkolog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmPunktOnkolog.Designer.cs">
+      <DependentUpon>FrmPunktOnkolog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmREberga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmREberga.Designer.cs">
+      <DependentUpon>FrmREberga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmRIFmazka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmRIFmazka.Designer.cs">
+      <DependentUpon>FrmRIFmazka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmSpermAMGF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmSpermAMGF.Designer.cs">
+      <DependentUpon>FrmSpermAMGF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmSpermObchii.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmSpermObchii.Designer.cs">
+      <DependentUpon>FrmSpermObchii.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmTestBerem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\FrmTestBerem.Designer.cs">
+      <DependentUpon>FrmTestBerem.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AnalizKala\FrmAnalKalUgkGrid.resx">
+      <DependentUpon>FrmAnalKalUgkGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizKala\FrmAnalKalUgl.resx">
+      <DependentUpon>FrmAnalKalUgl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizKala\FrmCalglist.resx">
+      <DependentUpon>FrmCalglist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizKala\FrmCalglistLINQ.resx">
+      <DependentUpon>FrmCalglistLINQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizKala\FrmIssledovKala.resx">
+      <DependentUpon>FrmIssledovKala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizKala\FrmKalOstric.resx">
+      <DependentUpon>FrmKalOstric.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizKala\FrmNovGemoglob.resx">
+      <DependentUpon>FrmNovGemoglob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmTromboelast.resx">
+      <DependentUpon>FrmTromboelast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmAnalKrGlikemihPr.resx">
+      <DependentUpon>FrmAnalKrGlikemihPr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmGazuElektro.resx">
+      <DependentUpon>FrmGazuElektro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmGemostazio.resx">
+      <DependentUpon>FrmGemostazio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmGrKrRezys.resx">
+      <DependentUpon>FrmGrKrRezys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmIsSKrmetIFA.resx">
+      <DependentUpon>FrmIsSKrmetIFA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmKoagylogramma.resx">
+      <DependentUpon>FrmKoagylogramma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmKrasnVolch.resx">
+      <DependentUpon>FrmKrasnVolch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmKrBioxim.resx">
+      <DependentUpon>FrmKrBioxim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmKrCA125.resx">
+      <DependentUpon>FrmKrCA125.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmKrELI12.resx">
+      <DependentUpon>FrmKrELI12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmKrELI24.resx">
+      <DependentUpon>FrmKrELI24.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmKrGemNizkogoUr.resx">
+      <DependentUpon>FrmKrGemNizkogoUr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmKrGemoliz.resx">
+      <DependentUpon>FrmKrGemoliz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmKrGomocestin.resx">
+      <DependentUpon>FrmKrGomocestin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmKrOb.resx">
+      <DependentUpon>FrmKrOb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmKrOsmotRezEritr.resx">
+      <DependentUpon>FrmKrOsmotRezEritr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmKrPCRMutacii.resx">
+      <DependentUpon>FrmKrPCRMutacii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmKrSaxar.resx">
+      <DependentUpon>FrmKrSaxar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmKrTromboeks.resx">
+      <DependentUpon>FrmKrTromboeks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmKrVich.resx">
+      <DependentUpon>FrmKrVich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\FrmTestTolerantGlycoze .resx">
+      <DependentUpon>FrmTestTolerantGlycoze .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizMochi\FrmMochaObchii.resx">
+      <DependentUpon>FrmMochaObchii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizMochi\FrmMohaBiohim.resx">
+      <DependentUpon>FrmMohaBiohim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizMochi\FrmMohasaharbelok.resx">
+      <DependentUpon>FrmMohasaharbelok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizMochi\FrmMohaSulkovich.resx">
+      <DependentUpon>FrmMohaSulkovich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizMochi\FrmMohaSutpbg.resx">
+      <DependentUpon>FrmMohaSutpbg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizMochi\FrmNechipor.resx">
+      <DependentUpon>FrmNechipor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizMochi\FrmTrixomonad.resx">
+      <DependentUpon>FrmTrixomonad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizMochi\FrmZimnickgo.resx">
+      <DependentUpon>FrmZimnickgo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Krsuvorotka1\FrmKrantigomoniz.resx">
+      <DependentUpon>FrmKrantigomoniz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Krsuvorotka1\FrmKrantitelaigmigg.resx">
+      <DependentUpon>FrmKrantitelaigmigg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Krsuvorotka1\FrmKRopSMetelektUEFAstra.resx">
+      <DependentUpon>FrmKRopSMetelektUEFAstra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Krsuvorotka1\FrmKrSImmunIgAIgMIgGIgE.resx">
+      <DependentUpon>FrmKrSImmunIgAIgMIgGIgE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Krsuvorotka1\FrmKrSIssNarFerIFA.resx">
+      <DependentUpon>FrmKrSIssNarFerIFA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Krsuvorotka1\FrmKrSuvGormIFA.resx">
+      <DependentUpon>FrmKrSuvGormIFA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Krsuvorotka1\FrmKrSuvIfaXgch.resx">
+      <DependentUpon>FrmKrSuvIfaXgch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maski\FrmEkcTrans.resx">
+      <DependentUpon>FrmEkcTrans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maski\FrmMazkinaFloru.resx">
+      <DependentUpon>FrmMazkinaFloru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mielogramma\FrmMielogramma.resx">
+      <DependentUpon>FrmMielogramma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New2202\FrmBakteriosBiomat1.resx">
+      <DependentUpon>FrmBakteriosBiomat1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New2202\FrmCitokin.resx">
+      <DependentUpon>FrmCitokin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New2202\FrmDiagSifilisa.resx">
+      <DependentUpon>FrmDiagSifilisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New2202\FrmImunTest.resx">
+      <DependentUpon>FrmImunTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New2202\FrmLikvoraIssled.resx">
+      <DependentUpon>FrmLikvoraIssled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New2202\FrmOpAgrTrBioleLa.resx">
+      <DependentUpon>FrmOpAgrTrBioleLa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New2202\FrmSoskobHMatki.resx">
+      <DependentUpon>FrmSoskobHMatki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Posevu\FrmPosevGrib.resx">
+      <DependentUpon>FrmPosevGrib.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Testu_prochie\FrmChesotka.resx">
+      <DependentUpon>FrmChesotka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\FrmAnSokProstat.resx">
+      <DependentUpon>FrmAnSokProstat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\FrmAspiratOnkolog.resx">
+      <DependentUpon>FrmAspiratOnkolog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\FrmCitogram.resx">
+      <DependentUpon>FrmCitogram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\FrmPCRisledov.resx">
+      <DependentUpon>FrmPCRisledov.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\FrmPunktOnkolog.resx">
+      <DependentUpon>FrmPunktOnkolog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\FrmREberga.resx">
+      <DependentUpon>FrmREberga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\FrmRIFmazka.resx">
+      <DependentUpon>FrmRIFmazka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\FrmSpermAMGF.resx">
+      <DependentUpon>FrmSpermAMGF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\FrmSpermObchii.resx">
+      <DependentUpon>FrmSpermObchii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\FrmTestBerem.resx">
+      <DependentUpon>FrmTestBerem.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AistLabData\AistLabData.csproj">
+      <Project>{91FF9C74-0F52-4F75-9D8C-598EC58B6CF0}</Project>
+      <Name>AistLabData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomControlLib\CustomControlLib.csproj">
+      <Project>{544D6F95-173F-46B4-9564-1684936083EE}</Project>
+      <Name>CustomControlLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

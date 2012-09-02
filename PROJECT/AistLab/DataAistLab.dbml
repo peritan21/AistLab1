@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="AIST" Class="DataAistLabDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=IVAN-PPC;Initial Catalog=AIST;User ID=aist" SettingsObjectName="AistLab.Properties.Settings" SettingsPropertyName="AISTConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ANALIZMENU" Member="ANALIZMENUs">
+    <Type Name="ANALIZMENU">
+      <Column Name="Analiz_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Analiz_Level" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Parent_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NAME" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TABINDEX" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PACIENT_ANALIZ" Member="PACIENT_ANALIZs">
+    <Type Name="PACIENT_ANALIZ">
+      <Column Name="analiz_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pacient_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dataanaliz" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="analiz_type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.ANALIZMENU_AddNewR" Method="ANALIZMENU_AddNewR">
+    <Parameter Name="NAME" Parameter="nAME" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Parent_ID" Parameter="parent_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TABINDEX" Parameter="tABINDEX" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ANALIZMENU_AddNewRResult">
+      <Column Name="Analiz_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NAME" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Analiz_Level" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Parent_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TABINDEX" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ANALIZMENU_Delete" Method="ANALIZMENU_Delete">
+    <Parameter Name="Analiz_ID" Parameter="analiz_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ANALIZMENU_GET" Method="ANALIZMENU_GET">
+    <Parameter Name="Analiz_ID" Parameter="analiz_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Analiz_Level" Parameter="analiz_Level" Type="System.Byte" DbType="TinyInt" />
+    <ElementType Name="ANALIZMENU_GETResult">
+      <Column Name="Analiz_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NAME" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Analiz_Level" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Parent_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TABINDEX" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ANALIZMENU_UpdateR" Method="ANALIZMENU_UpdateR">
+    <Parameter Name="Analiz_ID" Parameter="analiz_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NAME" Parameter="nAME" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Parent_ID" Parameter="parent_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TABINDEX" Parameter="tABINDEX" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.PACIENT_ANALIZ_ADD" Method="PACIENT_ANALIZ_ADD">
+    <Parameter Name="pacient_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dataanaliz" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="analiz_type" Type="System.Int32" DbType="Int" />
+    <ElementType Name="PACIENT_ANALIZ_ADDResult">
+      <Column Name="analiz_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pacient_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dataanaliz" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="analiz_type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PACIENT_ANALIZ_UPDATE" Method="PACIENT_ANALIZ_UPDATE">
+    <Parameter Name="analiz_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pacient_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dataanaliz" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="analiz_type" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.PACIENT_ANALIZDel" Method="PACIENT_ANALIZDel">
+    <Parameter Name="analiz_id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

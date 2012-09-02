@@ -1,0 +1,679 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F0E372DF-7844-427E-80A1-19556B9F7DEE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KdlGridUpdate</RootNamespace>
+    <AssemblyName>KdlGridUpdate</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnalizKala\UAnalkalUglev.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnalizKala\UAnalkalUglev.Designer.cs">
+      <DependentUpon>UAnalkalUglev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizKala\UCalGlistLINQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnalizKala\UCalGlistLINQ.Designer.cs">
+      <DependentUpon>UCalGlistLINQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizKala\UIssledKala.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnalizKala\UIssledKala.Designer.cs">
+      <DependentUpon>UIssledKala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizKala\UNovGemoglob.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnalizKala\UNovGemoglob.Designer.cs">
+      <DependentUpon>UNovGemoglob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizKala\UOstrica.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnalizKala\UOstrica.Designer.cs">
+      <DependentUpon>UOstrica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrTromboelast.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrTromboelast.Designer.cs">
+      <DependentUpon>UkrTromboelast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrBioxim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrBioxim.Designer.cs">
+      <DependentUpon>UkrBioxim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrCA125.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrCA125.Designer.cs">
+      <DependentUpon>UkrCA125.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrEli12.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrEli12.Designer.cs">
+      <DependentUpon>UkrEli12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrEli24.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrEli24.Designer.cs">
+      <DependentUpon>UkrEli24.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\Ukrgazelektro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\Ukrgazelektro.Designer.cs">
+      <DependentUpon>Ukrgazelektro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrGemoliz.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrGemoliz.Designer.cs">
+      <DependentUpon>UkrGemoliz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrGemostazio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrGemostazio.Designer.cs">
+      <DependentUpon>UkrGemostazio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrgLUKpROF.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrgLUKpROF.Designer.cs">
+      <DependentUpon>UkrgLUKpROF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrGomNizkogoUr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrGomNizkogoUr.Designer.cs">
+      <DependentUpon>UkrGomNizkogoUr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrGomocistein.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrGomocistein.Designer.cs">
+      <DependentUpon>UkrGomocistein.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrGrRezus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrGrRezus.Designer.cs">
+      <DependentUpon>UkrGrRezus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrIFA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrIFA.Designer.cs">
+      <DependentUpon>UkrIFA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrKougul.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrKougul.Designer.cs">
+      <DependentUpon>UkrKougul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrKrasnVolch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrKrasnVolch.Designer.cs">
+      <DependentUpon>UkrKrasnVolch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrObchi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrObchi.Designer.cs">
+      <DependentUpon>UkrObchi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrOsmotRezEritr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrOsmotRezEritr.Designer.cs">
+      <DependentUpon>UkrOsmotRezEritr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrPCRMutacii.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrPCRMutacii.Designer.cs">
+      <DependentUpon>UkrPCRMutacii.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrSaxar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrSaxar.Designer.cs">
+      <DependentUpon>UkrSaxar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrTestTolerant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrTestTolerant.Designer.cs">
+      <DependentUpon>UkrTestTolerant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrTromboeks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrTromboeks.Designer.cs">
+      <DependentUpon>UkrTromboeks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrVich.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analizkrovi\UkrVich.Designer.cs">
+      <DependentUpon>UkrVich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizMochi\UMochaBoixim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnalizMochi\UMochaBoixim.Designer.cs">
+      <DependentUpon>UMochaBoixim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizMochi\UMochaObchii.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnalizMochi\UMochaObchii.Designer.cs">
+      <DependentUpon>UMochaObchii.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizMochi\UMochaSaxBel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnalizMochi\UMochaSaxBel.Designer.cs">
+      <DependentUpon>UMochaSaxBel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizMochi\UMochaSulkovich.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnalizMochi\UMochaSulkovich.Designer.cs">
+      <DependentUpon>UMochaSulkovich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizMochi\UMochaSutpbg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnalizMochi\UMochaSutpbg.Designer.cs">
+      <DependentUpon>UMochaSutpbg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizMochi\UNechipor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnalizMochi\UNechipor.Designer.cs">
+      <DependentUpon>UNechipor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizMochi\UTrixomon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnalizMochi\UTrixomon.Designer.cs">
+      <DependentUpon>UTrixomon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizMochi\UZemnickogo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnalizMochi\UZemnickogo.Designer.cs">
+      <DependentUpon>UZemnickogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Krovsuvorotka1\Ukrantigominiz.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Krovsuvorotka1\Ukrantigominiz.Designer.cs">
+      <DependentUpon>Ukrantigominiz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Krovsuvorotka1\Ukrantitela.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Krovsuvorotka1\Ukrantitela.Designer.cs">
+      <DependentUpon>Ukrantitela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Krovsuvorotka1\UkrSuv01Astra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Krovsuvorotka1\UkrSuv01Astra.Designer.cs">
+      <DependentUpon>UkrSuv01Astra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Krovsuvorotka1\UkrSuvGormIFA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Krovsuvorotka1\UkrSuvGormIFA.Designer.cs">
+      <DependentUpon>UkrSuvGormIFA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Krovsuvorotka1\UkrSuvIFAAxgc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Krovsuvorotka1\UkrSuvIFAAxgc.Designer.cs">
+      <DependentUpon>UkrSuvIFAAxgc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Krovsuvorotka1\UkrSuvIgAIgG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Krovsuvorotka1\UkrSuvIgAIgG.Designer.cs">
+      <DependentUpon>UkrSuvIgAIgG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Krovsuvorotka1\UkrSuvNarFerIFA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Krovsuvorotka1\UkrSuvNarFerIFA.Designer.cs">
+      <DependentUpon>UkrSuvNarFerIFA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maski\UEksTrans.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Maski\UEksTrans.Designer.cs">
+      <DependentUpon>UEksTrans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maski\UMazkinaFloru.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Maski\UMazkinaFloru.Designer.cs">
+      <DependentUpon>UMazkinaFloru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mielogramma\UMielogramma.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mielogramma\UMielogramma.Designer.cs">
+      <DependentUpon>UMielogramma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New2202\UAgregacTromb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="New2202\UAgregacTromb.Designer.cs">
+      <DependentUpon>UAgregacTromb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New2202\UBacterioBiomat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="New2202\UBacterioBiomat.Designer.cs">
+      <DependentUpon>UBacterioBiomat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New2202\UCitokinu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="New2202\UCitokinu.Designer.cs">
+      <DependentUpon>UCitokinu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New2202\UDiagSifilis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="New2202\UDiagSifilis.Designer.cs">
+      <DependentUpon>UDiagSifilis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New2202\UImmunTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="New2202\UImmunTest.Designer.cs">
+      <DependentUpon>UImmunTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New2202\UIsledLikv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="New2202\UIsledLikv.Designer.cs">
+      <DependentUpon>UIsledLikv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New2202\USoskobBhMatki.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="New2202\USoskobBhMatki.Designer.cs">
+      <DependentUpon>USoskobBhMatki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Posevu\UPosevGrib.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Posevu\UPosevGrib.Designer.cs">
+      <DependentUpon>UPosevGrib.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\UCehesotka.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\UCehesotka.Designer.cs">
+      <DependentUpon>UCehesotka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\UAMGFvSperm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\UAMGFvSperm.Designer.cs">
+      <DependentUpon>UAMGFvSperm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\UAnSokProstat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\UAnSokProstat.Designer.cs">
+      <DependentUpon>UAnSokProstat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\UAspiratOnkocit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\UAspiratOnkocit.Designer.cs">
+      <DependentUpon>UAspiratOnkocit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\UCitogramma.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\UCitogramma.Designer.cs">
+      <DependentUpon>UCitogramma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\UkrPCRisledov.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\UkrPCRisledov.Designer.cs">
+      <DependentUpon>UkrPCRisledov.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\UPunktatOnkocit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\UPunktatOnkocit.Designer.cs">
+      <DependentUpon>UPunktatOnkocit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\UReberga.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\UReberga.Designer.cs">
+      <DependentUpon>UReberga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\URIFmazka.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\URIFmazka.Designer.cs">
+      <DependentUpon>URIFmazka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\USperObchi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\USperObchi.Designer.cs">
+      <DependentUpon>USperObchi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testu_prochie\UTestBerem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Testu_prochie\UTestBerem.Designer.cs">
+      <DependentUpon>UTestBerem.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AistLabData\AistLabData.csproj">
+      <Project>{91FF9C74-0F52-4F75-9D8C-598EC58B6CF0}</Project>
+      <Name>AistLabData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomControlLib\CustomControlLib.csproj">
+      <Project>{544D6F95-173F-46B4-9564-1684936083EE}</Project>
+      <Name>CustomControlLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KdlForm\KdlForm.csproj">
+      <Project>{5DA7684E-DB93-4C9B-9B79-7750BE29DEDA}</Project>
+      <Name>KdlForm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AnalizKala\UAnalkalUglev.resx">
+      <DependentUpon>UAnalkalUglev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizKala\UCalGlistLINQ.resx">
+      <DependentUpon>UCalGlistLINQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizKala\UIssledKala.resx">
+      <DependentUpon>UIssledKala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizKala\UNovGemoglob.resx">
+      <DependentUpon>UNovGemoglob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizKala\UOstrica.resx">
+      <DependentUpon>UOstrica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrTromboelast.resx">
+      <DependentUpon>UkrTromboelast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrBioxim.resx">
+      <DependentUpon>UkrBioxim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrCA125.resx">
+      <DependentUpon>UkrCA125.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrEli12.resx">
+      <DependentUpon>UkrEli12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrEli24.resx">
+      <DependentUpon>UkrEli24.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\Ukrgazelektro.resx">
+      <DependentUpon>Ukrgazelektro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrGemoliz.resx">
+      <DependentUpon>UkrGemoliz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrGemostazio.resx">
+      <DependentUpon>UkrGemostazio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrgLUKpROF.resx">
+      <DependentUpon>UkrgLUKpROF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrGomNizkogoUr.resx">
+      <DependentUpon>UkrGomNizkogoUr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrGomocistein.resx">
+      <DependentUpon>UkrGomocistein.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrGrRezus.resx">
+      <DependentUpon>UkrGrRezus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrIFA.resx">
+      <DependentUpon>UkrIFA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrKougul.resx">
+      <DependentUpon>UkrKougul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrKrasnVolch.resx">
+      <DependentUpon>UkrKrasnVolch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrObchi.resx">
+      <DependentUpon>UkrObchi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrOsmotRezEritr.resx">
+      <DependentUpon>UkrOsmotRezEritr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrPCRMutacii.resx">
+      <DependentUpon>UkrPCRMutacii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrSaxar.resx">
+      <DependentUpon>UkrSaxar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrTestTolerant.resx">
+      <DependentUpon>UkrTestTolerant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrTromboeks.resx">
+      <DependentUpon>UkrTromboeks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analizkrovi\UkrVich.resx">
+      <DependentUpon>UkrVich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizMochi\UMochaBoixim.resx">
+      <DependentUpon>UMochaBoixim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizMochi\UMochaObchii.resx">
+      <DependentUpon>UMochaObchii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizMochi\UMochaSaxBel.resx">
+      <DependentUpon>UMochaSaxBel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizMochi\UMochaSulkovich.resx">
+      <DependentUpon>UMochaSulkovich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizMochi\UMochaSutpbg.resx">
+      <DependentUpon>UMochaSutpbg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizMochi\UNechipor.resx">
+      <DependentUpon>UNechipor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizMochi\UTrixomon.resx">
+      <DependentUpon>UTrixomon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizMochi\UZemnickogo.resx">
+      <DependentUpon>UZemnickogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Krovsuvorotka1\Ukrantigominiz.resx">
+      <DependentUpon>Ukrantigominiz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Krovsuvorotka1\Ukrantitela.resx">
+      <DependentUpon>Ukrantitela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Krovsuvorotka1\UkrSuv01Astra.resx">
+      <DependentUpon>UkrSuv01Astra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Krovsuvorotka1\UkrSuvGormIFA.resx">
+      <DependentUpon>UkrSuvGormIFA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Krovsuvorotka1\UkrSuvIFAAxgc.resx">
+      <DependentUpon>UkrSuvIFAAxgc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Krovsuvorotka1\UkrSuvIgAIgG.resx">
+      <DependentUpon>UkrSuvIgAIgG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Krovsuvorotka1\UkrSuvNarFerIFA.resx">
+      <DependentUpon>UkrSuvNarFerIFA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maski\UEksTrans.resx">
+      <DependentUpon>UEksTrans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maski\UMazkinaFloru.resx">
+      <DependentUpon>UMazkinaFloru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mielogramma\UMielogramma.resx">
+      <DependentUpon>UMielogramma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New2202\UAgregacTromb.resx">
+      <DependentUpon>UAgregacTromb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New2202\UBacterioBiomat.resx">
+      <DependentUpon>UBacterioBiomat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New2202\UCitokinu.resx">
+      <DependentUpon>UCitokinu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New2202\UDiagSifilis.resx">
+      <DependentUpon>UDiagSifilis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New2202\UImmunTest.resx">
+      <DependentUpon>UImmunTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New2202\UIsledLikv.resx">
+      <DependentUpon>UIsledLikv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New2202\USoskobBhMatki.resx">
+      <DependentUpon>USoskobBhMatki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Posevu\UPosevGrib.resx">
+      <DependentUpon>UPosevGrib.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\UCehesotka.resx">
+      <DependentUpon>UCehesotka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\UAMGFvSperm.resx">
+      <DependentUpon>UAMGFvSperm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\UAnSokProstat.resx">
+      <DependentUpon>UAnSokProstat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\UAspiratOnkocit.resx">
+      <DependentUpon>UAspiratOnkocit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\UCitogramma.resx">
+      <DependentUpon>UCitogramma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\UkrPCRisledov.resx">
+      <DependentUpon>UkrPCRisledov.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\UPunktatOnkocit.resx">
+      <DependentUpon>UPunktatOnkocit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\UReberga.resx">
+      <DependentUpon>UReberga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\URIFmazka.resx">
+      <DependentUpon>URIFmazka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\USperObchi.resx">
+      <DependentUpon>USperObchi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testu_prochie\UTestBerem.resx">
+      <DependentUpon>UTestBerem.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\AistLabData.CHESOTKA.datasource" />
+    <None Include="Properties\DataSources\AistLabData.KRANTIGOMINIZ.datasource" />
+    <None Include="Properties\DataSources\AistLabData.KRANTITELA.datasource" />
+    <None Include="Properties\DataSources\AistLabData.TROMBOELAST.datasource" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

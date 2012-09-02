@@ -1,0 +1,827 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="KDL" Class="DataClassesLabReportDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=PPC;Initial Catalog=KDL;Integrated Security=True" SettingsObjectName="AistLabData.Properties.Settings" SettingsPropertyName="KDLConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.VBAKTERIOSBIOMAT_RU" Member="VBAKTERIOSBIOMAT_RUs">
+    <Type Name="VBAKTERIOSBIOMAT_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Орган" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Лейкоцит" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Эпителий" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Слизь" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Флора" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VCITOGRAMMA_RU" Member="VCITOGRAMMA_RUs">
+    <Type Name="VCITOGRAMMA_RU">
+      <Column Name="FIOS" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="[Кол-во преп.]" Member="Кол_во_преп_" Type="System.String" DbType="VarChar(23) NOT NULL" CanBeNull="false" />
+      <Column Name="Цитограмма" Type="System.String" DbType="VarChar(49) NOT NULL" CanBeNull="false" />
+      <Column Name="[Другие формы]" Member="Другие_формы" Type="System.String" DbType="VarChar(850) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VCITOKIN_RU" Member="VCITOKIN_RUs">
+    <Type Name="VCITOKIN_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="[ИЛ-1в]" Member="ИЛ_1в" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="[ИЛ-6]" Member="ИЛ_6" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="[У-ИНФ]" Member="У_ИНФ" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="[а-ФНО]" Member="а_ФНО" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VDIAGSIFILISA_RU" Member="VDIAGSIFILISA_RUs">
+    <Type Name="VDIAGSIFILISA_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="RPR" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="РПГА" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VEAKULJT_RU" Member="VEAKULJT_RUs">
+    <Type Name="VEAKULJT_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="[Кол-во]" Member="Кол_во" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Цвет" Type="System.String" DbType="VarChar(14) NOT NULL" CanBeNull="false" />
+      <Column Name="Вязкость" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="рН" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Время разж.]" Member="Время_разж_" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Конц.сперм.]" Member="Конц_сперм_" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Живые" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Мертвые" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Нормокинезис" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Акинезис" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Гипокинезис" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Дискинезис" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Норм.сперм.]" Member="Норм_сперм_" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="[Паталог.гол.]" Member="Паталог_гол_" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="[Патал.шейки]" Member="Патал_шейки" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="[Патал.хвоста]" Member="Патал_хвоста" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="[Старые формы]" Member="Старые_формы" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="[Юные формы]" Member="Юные_формы" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="Спермагглютинация" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Эритроциты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Эпителий" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Лецит.зерна]" Member="Лецит_зерна" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Лейкоциты" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[МАР-тес]" Member="МАР_тес" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VEKUSUDTRANSUD_RU" Member="VEKUSUDTRANSUD_RUs">
+    <Type Name="VEKUSUDTRANSUD_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="[Кол-во]" Member="Кол_во" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[Уд.вес]" Member="Уд_вес" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Белок" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="[р.Ревальта]" Member="р_Ревальта" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Цвет" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="[Микр.нативного препарата Le]" Member="Микр_нативного_препарата_Le" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Эп.]" Member="Эп_" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Er" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Мезателий" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Микрофаги" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Макрофаги" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VIMUNTEST_RU" Member="VIMUNTEST_RUs">
+    <Type Name="VIMUNTEST_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="[Тест контакта спермы и церкв.слизи ТКСЦС]" Member="Тест_контакта_спермы_и_церкв_слизи_ТКСЦС" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Посткоитальный тест ПКТ]" Member="Посткоитальный_тест_ПКТ" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKALANALIZUGLEV_RU" Member="VKALANALIZUGLEV_RUs">
+    <Type Name="VKALANALIZUGLEV_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Результат" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKALGLIST_RU" Member="VKALGLIST_RUs">
+    <Type Name="VKALGLIST_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="[Яйца глист]" Member="Яйца_глист" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Я/Г Кол-во]" Member="Я_Г_Кол_во" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Простейшие" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Прост.Кол-во]" Member="Прост_Кол_во" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKALISSLEDOV_RU" Member="VKALISSLEDOV_RUs">
+    <Type Name="VKALISSLEDOV_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Цвет" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Реакция" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="Консистенция" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Мыш.волокна перев.]" Member="Мыш_волокна_перев_" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Мыш.волокна неперев.]" Member="Мыш_волокна_неперев_" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Соед.ткань]" Member="Соед_ткань" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Жир нейтральный]" Member="Жир_нейтральный" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Жирные кислоты]" Member="Жирные_кислоты" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Мыла" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Растит.клетч.пер.]" Member="Растит_клетч_пер_" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Растит.клетч.непер.]" Member="Растит_клетч_непер_" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Крахмал" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Йодофильная флора]" Member="Йодофильная_флора" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Слизь" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Эпителий" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Лейкоциты" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Эритроциты" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Бактерии" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Дрожжевые грибки]" Member="Дрожжевые_грибки" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKALNOVGEMOGLOBIN_RU" Member="VKALNOVGEMOGLOBIN_RUs">
+    <Type Name="VKALNOVGEMOGLOBIN_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Результат" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKALOSTRICPERIANAL_RU" Member="VKALOSTRICPERIANAL_RUs">
+    <Type Name="VKALOSTRICPERIANAL_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Результат" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKRGEMOLIZ_RU" Member="VKRGEMOLIZ_RUs">
+    <Type Name="VKRGEMOLIZ_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Гемолиз" Type="System.String" DbType="VarChar(19) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKRGLIKEMPR_RU" Member="VKRGLIKEMPR_RUs">
+    <Type Name="VKRGLIKEMPR_RU">
+      <Column Name="FIOS" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="[Натощак 8-00]" Member="Натощак_8_00" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[Через 4 часа 12-00]" Member="Через_4_часа_12_00" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[Через 4 часа 16-00]" Member="Через_4_часа_16_00" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[Через 4 часа 20-00]" Member="Через_4_часа_20_00" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKRGOMOCISTEIN_RU" Member="VKRGOMOCISTEIN_RUs">
+    <Type Name="VKRGOMOCISTEIN_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Гомоцистеин" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKRGRUPREZ_RU" Member="VKRGRUPREZ_RUs">
+    <Type Name="VKRGRUPREZ_RU">
+      <Column Name="FIOS" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="[Группа крови]" Member="Группа_крови" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="[Резус-фактор]" Member="Резус_фактор" Type="System.String" DbType="VarChar(19) NOT NULL" CanBeNull="false" />
+      <Column Name="[Титр антител]" Member="Титр_антител" Type="System.String" DbType="VarChar(19) NOT NULL" CanBeNull="false" />
+      <Column Name="[Проба Кумбса]" Member="Проба_Кумбса" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKRIFA_RU" Member="VKRIFA_RUs">
+    <Type Name="VKRIFA_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="[Опр.антител к анти-В2-гликопротеину IgM]" Member="Опр_антител_к_анти_В2_гликопротеину_IgM" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Опр.антител к анти-В2-гликопротеину IgG]" Member="Опр_антител_к_анти_В2_гликопротеину_IgG" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Опр. антител к протромбину IgM]" Member="Опр__антител_к_протромбину_IgM" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Опр. антител к протромбину IgG]" Member="Опр__антител_к_протромбину_IgG" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Опр.антител к кардиолипину IgM]" Member="Опр_антител_к_кардиолипину_IgM" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Опр.антител к кардиолипину IgG]" Member="Опр_антител_к_кардиолипину_IgG" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Опр.антител к аннексину V IgM]" Member="Опр_антител_к_аннексину_V_IgM" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Опр.антител к аннексину V IgG]" Member="Опр_антител_к_аннексину_V_IgG" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Гомоцистеин" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKRKOAGOLOGRAMMA_RU" Member="VKRKOAGOLOGRAMMA_RUs">
+    <Type Name="VKRKOAGOLOGRAMMA_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="[Фибриноген по Клаусу]" Member="Фибриноген_по_Клаусу" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="АЧТВ" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Протромбиновое время]" Member="Протромбиновое_время" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Протромб.показ.по Квику]" Member="Протромб_показ_по_Квику" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Протромб.отношение]" Member="Протромб_отношение" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="[Междун.нормал.отношение]" Member="Междун_нормал_отношение" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="РФМК" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Тромб.время]" Member="Тромб_время" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Антитромбин З]" Member="Антитромбин_З" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Протеин С]" Member="Протеин_С" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Парус тест протеин С]" Member="Парус_тест_протеин_С" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[Опр.Резистент.Vа к активар]" Member="Опр_Резистент_Vа_к_активар" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[Волчаночный антикоугалянт]" Member="Волчаночный_антикоугалянт" Type="System.String" DbType="VarChar(19) NOT NULL" CanBeNull="false" />
+      <Column Name="[Ретракция кровяного сгустка]" Member="Ретракция_кровяного_сгустка" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Фактор Виллебранда]" Member="Фактор_Виллебранда" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Фактор 8]" Member="Фактор_8" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="[Фактор 9]" Member="Фактор_9" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="[Факор 5]" Member="Факор_5" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="[Д-Димер нико карт]" Member="Д_Димер_нико_карт" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="[Д-Димер+]" Member="Д_Димер_" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Плазминоген" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKRKRASNVOLCH_RU" Member="VKRKRASNVOLCH_RUs">
+    <Type Name="VKRKRASNVOLCH_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Результат" Type="System.String" DbType="VarChar(19) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKROPBFSMUEFASTRA_RU" Member="VKROPBFSMUEFASTRA_RUs">
+    <Type Name="VKROPBFSMUEFASTRA_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Альбумин" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Alfa 1]" Member="Alfa_1" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Aifa 2]" Member="Aifa_2" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Бета" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Гамма" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Общий белок]" Member="Общий_белок" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Соотношение" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKRSAHAR_RU" Member="VKRSAHAR_RUs">
+    <Type Name="VKRSAHAR_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Сахар" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKRSISSNARFERMIFA_RU" Member="VKRSISSNARFERMIFA_RUs">
+    <Type Name="VKRSISSNARFERMIFA_RU">
+      <Column Name="FIOS" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="[Антиовариальные антитела (АОА)]" Member="Антиовариальные_антитела__АОА_" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Антиядерные антитела (АЯА)]" Member="Антиядерные_антитела__АЯА_" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="[Антизоновые антитела]" Member="Антизоновые_антитела" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKRSUVIFAXGCH_RU" Member="VKRSUVIFAXGCH_RUs">
+    <Type Name="VKRSUVIFAXGCH_RU">
+      <Column Name="FIOS" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="[Антитела к ХГЧ Ig M]" Member="Антитела_к_ХГЧ_Ig_M" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Антитела к ХГЧ ig G]" Member="Антитела_к_ХГЧ_ig_G" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Суммарные антитела к кардиолипинам Ig M]" Member="Суммарные_антитела_к_кардиолипинам_Ig_M" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[кардиолипинам Ig A]" Member="кардиолипинам_Ig_A" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[кардиолипинам Ig G]" Member="кардиолипинам_Ig_G" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKRVICH_RU" Member="VKRVICH_RUs">
+    <Type Name="VKRVICH_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="ВИЧ" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VLIKVORAISSLED_RU" Member="VLIKVORAISSLED_RUs">
+    <Type Name="VLIKVORAISSLED_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Количество" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Прозрачность" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Цвет" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="Сахар" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Цитоза" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Реакция Панди]" Member="Реакция_Панди" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Белок" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="Ликворограмма" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Леонозофил" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VMAZKINAFLORU_RU" Member="VMAZKINAFLORU_RUs">
+    <Type Name="VMAZKINAFLORU_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="[Лейкоциты U]" Member="Лейкоциты_U" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Лейкоциты C]" Member="Лейкоциты_C" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Лейкоциты V]" Member="Лейкоциты_V" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Эпителий U]" Member="Эпителий_U" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Эпителий C]" Member="Эпителий_C" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Эпителий V]" Member="Эпителий_V" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Слизь U]" Member="Слизь_U" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Слизь C]" Member="Слизь_C" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Слизь V]" Member="Слизь_V" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Флора U]" Member="Флора_U" Type="System.String" DbType="VarChar(107)" CanBeNull="true" />
+      <Column Name="[Флора C]" Member="Флора_C" Type="System.String" DbType="VarChar(107)" CanBeNull="true" />
+      <Column Name="[Флора V]" Member="Флора_V" Type="System.String" DbType="VarChar(107)" CanBeNull="true" />
+      <Column Name="[Гонококи U]" Member="Гонококи_U" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Гонококи C]" Member="Гонококи_C" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Гонококи V]" Member="Гонококи_V" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Трихомонады U]" Member="Трихомонады_U" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Трихомонады C]" Member="Трихомонады_C" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Трихомонады V]" Member="Трихомонады_V" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Candida U]" Member="Candida_U" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Candida C]" Member="Candida_C" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Candida V]" Member="Candida_V" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Гарднереллы U]" Member="Гарднереллы_U" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Гарднереллы C]" Member="Гарднереллы_C" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Гарднереллы V]" Member="Гарднереллы_V" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Мобилункус U]" Member="Мобилункус_U" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Мобилункус C]" Member="Мобилункус_C" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Мобилункус V]" Member="Мобилункус_V" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VMIELOGRAMMA_RU" Member="VMIELOGRAMMA_RUs">
+    <Type Name="VMIELOGRAMMA_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="[Недифферен.бласты]" Member="Недифферен_бласты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="миелобласты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="промиелоциты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Миелоциты нейтрофильные]" Member="Миелоциты_нейтрофильные" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="базофильные" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="эозинофильные" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Метамиелоциты нейтрофильные]" Member="Метамиелоциты_нейтрофильные" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Метамиел.базофильные]" Member="Метамиел_базофильные" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Метамиел.эозинофильные]" Member="Метамиел_эозинофильные" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Палочкоядерные нейтрофильные]" Member="Палочкоядерные_нейтрофильные" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Палочк.базофильные]" Member="Палочк_базофильные" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Палочк. эозинофильные]" Member="Палочк__эозинофильные" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Сегментоядерные нейтрофилы]" Member="Сегментоядерные_нейтрофилы" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Эозинофилы" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Базофилы" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Лимфобласты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Пролимфоциты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Лимфоциты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Моноциты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Эритробласты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Нормоциты базофильные]" Member="Нормоциты_базофильные" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="полихроматофильные" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="оксифильные" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Плазматические клетки]" Member="Плазматические_клетки" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Мегакариобласты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Мегакариоцит базофильный]" Member="Мегакариоцит_базофильный" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="полихроматофильный" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="оксифильный" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Ретикулярные клетки]" Member="Ретикулярные_клетки" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Голоядерные клетки]" Member="Голоядерные_клетки" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Клетки деления эритроцитарного ряда]" Member="Клетки_деления_эритроцитарного_ряда" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[миелобластного ряда]" Member="миелобластного_ряда" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Количество миелокариоцитов]" Member="Количество_миелокариоцитов" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Количество мегакариоцитов]" Member="Количество_мегакариоцитов" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Лейкоэритробластное соотношение]" Member="Лейкоэритробластное_соотношение" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Костномозговой индекс созревания нейтрофилов]" Member="Костномозговой_индекс_созревания_нейтрофилов" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Индекс созревания эритробластов]" Member="Индекс_созревания_эритробластов" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VMOCHANEHIPOR_RU" Member="VMOCHANEHIPOR_RUs">
+    <Type Name="VMOCHANEHIPOR_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Лейкоциты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Эритроциты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Цилиндры" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VMOCHAOBCH_RU" Member="VMOCHAOBCH_RUs">
+    <Type Name="VMOCHAOBCH_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Количество" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Цвет" Type="System.String" DbType="VarChar(18) NOT NULL" CanBeNull="false" />
+      <Column Name="Реакция" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="[Уд.вес]" Member="Уд_вес" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Белок" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[Белок след]" Member="Белок_след" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Сахар" Type="System.String" DbType="VarChar(19) NOT NULL" CanBeNull="false" />
+      <Column Name="Прозрачность" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Кетоновые тела]" Member="Кетоновые_тела" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Билирубин" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Уробилиноиды" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Эпител.плоский]" Member="Эпител_плоский" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Переходный" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Почечный" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Лейкоциты" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Эритроциты" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Цилинд.гиалин.]" Member="Цилинд_гиалин_" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Зернистые" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Восковидные" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Соли" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="[Соли какие]" Member="Соли_какие" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Слизь" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Бактерии" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Прочее" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Прочее что]" Member="Прочее_что" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VMOCHATRIHOMON_RU" Member="VMOCHATRIHOMON_RUs">
+    <Type Name="VMOCHATRIHOMON_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Лейкоциты" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Трихомонады" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="Эпителии" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Эритроциты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Бактерии" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="[Лецитиновые зерна]" Member="Лецитиновые_зерна" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="Соли" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="[Соли какие]" Member="Соли_какие" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VMOHABIOHIM_RU" Member="VMOHABIOHIM_RUs">
+    <Type Name="VMOHABIOHIM_RU">
+      <Column Name="FIOS" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="[Определ.креатенина в моче]" Member="Определ_креатенина_в_моче" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Альфа амилаза мочи]" Member="Альфа_амилаза_мочи" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Клиренс креатинина]" Member="Клиренс_креатинина" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Определ.канальцевой реабсорбации]" Member="Определ_канальцевой_реабсорбации" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Определ.мочевины в моче]" Member="Определ_мочевины_в_моче" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Определ.мочевой кислоты в моче]" Member="Определ_мочевой_кислоты_в_моче" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VMOHASAHARBELOK_RU" Member="VMOHASAHARBELOK_RUs">
+    <Type Name="VMOHASAHARBELOK_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Сахар" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="Белок" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VOPAGRTRBIOLELA230_2_RU" Member="VOPAGRTRBIOLELA230_2_RUs">
+    <Type Name="VOPAGRTRBIOLELA230_2_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="[Спонтанная агрегация на 2 мин.]" Member="Спонтанная_агрегация_на_2_мин_" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Спонтанная агрегация Мах.]" Member="Спонтанная_агрегация_Мах_" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Ристомицин" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Коллаген" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Адреналин" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[АДФ 5 мк М]" Member="АДФ_5_мк_М" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VPOSEVGRIB_RU" Member="VPOSEVGRIB_RUs">
+    <Type Name="VPOSEVGRIB_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="tr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="gr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[tr+ дрожжевые грибы]" Member="tr__дрожжевые_грибы" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[gr+ дрожжевые грибы]" Member="gr__дрожжевые_грибы" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VRIFMAZKA_RU" Member="VRIFMAZKA_RUs">
+    <Type Name="VRIFMAZKA_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Хламидии" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Уреаплазмы" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Микоплазмы" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ЦМВ" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ВПГ" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VSOKPROSTAT_RU" Member="VSOKPROSTAT_RUs">
+    <Type Name="VSOKPROSTAT_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Лейкоциты" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Эпителий" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="Слизь" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Соли" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Соли какие]" Member="Соли_какие" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="[Лецитиновые зёрна]" Member="Лецитиновые_зёрна" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Бактерии" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Эритроциты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Сперматозоиды" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="Трихомонады" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VSPERMAMGF_RU" Member="VSPERMAMGF_RUs">
+    <Type Name="VSPERMAMGF_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="АМГФ" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VTESTBEREM_RU" Member="VTESTBEREM_RUs">
+    <Type Name="VTESTBEREM_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Результат" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VMOHAZEMNICKOGO_RU" Member="VMOHAZEMNICKOGO_RUs">
+    <Type Name="VMOHAZEMNICKOGO_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="м69чкол" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="м69чудвес" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="м912чкол" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="м912чудвес" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="м1215чкол" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="м1215чудвес" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="м1518чкол" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="м1518чудвес" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="Дневнойдиурез" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="м1821чкол" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="м1821чудвес" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="м2124чкол" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="м2124чудвес" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="м03чкол" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="м03чудвес" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="м36чкол" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="м36чудвес" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="Ночнойдиурез" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="Ночнойдиурезудвес" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="Общийдиурез" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKRSUVGORMIFA_RU" Member="VKRSUVGORMIFA_RUs">
+    <Type Name="VKRSUVGORMIFA_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Пролактин" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Кортизол" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="[ТТГтиреотропный гормон]" Member="ТТГтиреотропный_гормон" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Т4тироксин" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Т4свободный" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Т3трийодтиронин" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="cТ3свободный" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="АТкТГантктиреоглоб" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="АТкТПОантктирпероксид" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Тестерон" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Свободный тестерон]" Member="Свободный_тестерон" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="Свобтестеронпгмл" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Фолликулостимул.гормон ФСГ]" Member="Фолликулостимул_гормон_ФСГ" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ФСГмМЕмл" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Лютеинизирующий гормон ЛГ]" Member="Лютеинизирующий_гормон_ЛГ" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ЛГмМЕмл" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Эстрадиол Е2]" Member="Эстрадиол_Е2" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="Е2пгмл" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Прогестерон" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="[Прогнмоль/л]" Member="Прогнмоль_л" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Дегидр.сульф.ДГЭА-С]" Member="Дегидр_сульф_ДГЭА_С" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="ДГЭАСмкгмл" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[к17а-ОН-Прогестерон(17-ОНП)]" Member="к17а_ОН_Прогестерон_17_ОНП_" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="к17ОНПнгмл" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Антимюллеровский гормон АМГ]" Member="Антимюллеровский_гормон_АМГ" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="АМГнгмл" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[Ингибин В]" Member="Ингибин_В" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="Внгмл" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Ферритин" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="нгмл" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[Опред.простатспец. антиг.ПСА в сыв.крови]" Member="Опред_простатспец__антиг_ПСА_в_сыв_крови" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKROBANALIZ_RU" Member="VKROBANALIZ_RUs">
+    <Type Name="VKROBANALIZ_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Лейкоциты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Базофилы" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Эозин" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Палочки" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Сегмент" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Лимфоциты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Моноциты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Плазм.клетка]" Member="Плазм_клетка" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Миэлоц.]" Member="Миэлоц_" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Юные" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Эритроциты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Гемоглобин" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Гематокрит" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Ср.об.эритроцита]" Member="Ср_об_эритроцита" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Сред.содер.гемоглобина в эрит.]" Member="Сред_содер_гемоглобина_в_эрит_" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Сред.концетр.гемоглоб.в эрит.]" Member="Сред_концетр_гемоглоб_в_эрит_" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Стандартное откл.объема эрит.]" Member="Стандартное_откл_объема_эрит_" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Сахар" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Коэфф.вариации эрит.]" Member="Коэфф_вариации_эрит_" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Тромбоциты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Ширина расп.тромбоц.по объему]" Member="Ширина_расп_тромбоц_по_объему" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Сред.об.тромбоцитов в крови]" Member="Сред_об_тромбоцитов_в_крови" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[молодых тромб.]" Member="молодых_тромб_" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Цветной показатель]" Member="Цветной_показатель" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Ретиколуциты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Свёрт. крови начало]" Member="Свёрт__крови_начало" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Свёрт. крови конец]" Member="Свёрт__крови_конец" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Длит.кровотечения]" Member="Длит_кровотечения" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Нормобласты" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Анизоцитоз" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Пойкилоцитоз" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Гипохромия" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Токсич.зернистость]" Member="Токсич_зернистость" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Полихроматофилы" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="СОЭ" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKRTESTTOLERGL_RU" Member="VKRTESTTOLERGL_RUs">
+    <Type Name="VKRTESTTOLERGL_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Натощак" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Через 1 час]" Member="Через_1_час" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Через 2 часа]" Member="Через_2_часа" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Files" Member="Files">
+    <Type Name="File">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="[File]" Member="File1" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CompressFile" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKRBIOHIMII_RU" Member="VKRBIOHIMII_RUs">
+    <Type Name="VKRBIOHIMII_RU">
+      <Column Name="ФИО" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="[Билирубин общий]" Member="Билирубин_общий" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="[Билирубин прямой]" Member="Билирубин_прямой" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="[Билирубин непрямой]" Member="Билирубин_непрямой" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="АСАТ" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="АЛАТ" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Мочевина" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Общий белок]" Member="Общий_белок" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Креатинин" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Мочевая кислота]" Member="Мочевая_кислота" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Железо" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="ОЖСС" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="НЖСС" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Коэф.насыщ.трансф.желез.]" Member="Коэф_насыщ_трансф_желез_" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[СРБ Кач. мет.]" Member="СРБ_Кач__мет_" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[СРБ Колич.мет.]" Member="СРБ_Колич_мет_" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[РФ Кач. мет.]" Member="РФ_Кач__мет_" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[РФ Колич. мет.]" Member="РФ_Колич__мет_" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[АСЛ-О Кач. мет.]" Member="АСЛ_О_Кач__мет_" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[АСЛ-О Колич. мет.]" Member="АСЛ_О_Колич__мет_" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Глюкоза" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[Тимоловая проба]" Member="Тимоловая_проба" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Щелочная фосфатаза]" Member="Щелочная_фосфатаза" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Альфа-амилаза]" Member="Альфа_амилаза" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Магний" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Хлориды" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Креатинкиназа" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[Фосфор неорганич.]" Member="Фосфор_неорганич_" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Калий" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Натрий" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[Кальций ионизиров.]" Member="Кальций_ионизиров_" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[Кальций общий]" Member="Кальций_общий" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="IgA" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="IgM" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="IgG" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Hba1c" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Ферритин" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Трансферрин" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Холестерин" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Триглицериды" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[ХС ЛПВП(а-ХС)]" Member="ХС_ЛПВП_а_ХС_" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[ХС ЛПНП(в-ХС)]" Member="ХС_ЛПНП_в_ХС_" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[ХС ЛПОНП(пре-в-ХС)]" Member="ХС_ЛПОНП_пре_в_ХС_" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[Инд.атерогенности]" Member="Инд_атерогенности" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[Инд.атерогенности У лиц с ИБС]" Member="Инд_атерогенности_У_лиц_с_ИБС" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[Опред. ГГТ в сыворотки]" Member="Опред__ГГТ_в_сыворотки" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="[Опред. прокальцитонина (ПКТ)]" Member="Опред__прокальцитонина__ПКТ_" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKRTROMBOEKSTOGRAMM" Member="VKRTROMBOEKSTOGRAMMs">
+    <Type Name="VKRTROMBOEKSTOGRAMM">
+      <Column Name="FIOS" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Vr" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vk" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vangle" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vma" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vpma" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vg" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vepl" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Va" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vci" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vly30" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Va30" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vcl30" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Va60" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vcl60" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vly60" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vclt" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vtpi" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vtma" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Ve" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vsp" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vlte" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="krtromboeks_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VELI12" Member="VELI12s">
+    <Type Name="VELI12">
+      <Column Name="FIOS" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Vatkxgch" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkdnk" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkb2" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkkollagen" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatlfcigg" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkinsulin" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatktiroglobulin" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatks100" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkspr06" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatktrm03" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkanca" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkkim05" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Votklonenie" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="elip12_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VELI24" Member="VELI24s">
+    <Type Name="VELI24">
+      <Column Name="FIOS" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Vatkdnk" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkb2" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkfcig" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkcom02" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkbadrenorec" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatktgm03" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkanca" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkkim05" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkkis07" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatklum02" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatklus06" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkgam02" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkkitm07" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkhes08" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkhmmp" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkinsulinu" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkrecepinsulin" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatktiroglobulin" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkreceptttg" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkadrmdc0" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkspr06" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatks100" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkgfap" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Vatkobm" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Votklonenie" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="elip24_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKRSIMMUNIgAIgMIgGIgE" Member="VKRSIMMUNIgAIgMIgGIgEs">
+    <Type Name="VKRSIMMUNIgAIgMIgGIgE">
+      <Column Name="FIOS" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Vopredelenieiga" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="krsopimmungl_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKRSIMMUNIgAIgMIgGIgE_RU" Member="VKRSIMMUNIgAIgMIgGIgE_RUs">
+    <Type Name="VKRSIMMUNIgAIgMIgGIgE_RU">
+      <Column Name="FIOS" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="[Определение Ig A]" Member="Определение_Ig_A" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="krsopimmungl_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VKRGLIKEMPR" Member="VKRGLIKEMPRs">
+    <Type Name="VKRGLIKEMPR">
+      <Column Name="FIOS" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="Vdata1" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Vresult1" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Vdata2" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Vresult2" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Vdata3" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Vresult3" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Vdata4" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Vresult4" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Vdata5" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Vresult5" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Vdata6" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Vresult6" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Vdata7" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Vresult7" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Vdata8" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Vresult8" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Vdata9" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Vresult9" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Vdata10" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Vresult10" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ankrglikemprof_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.ReportDelete" Method="ReportDelete">
+    <Parameter Name="fileshort" Type="System.String" DbType="VarChar(500)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ReportLoad" Method="ReportLoad">
+    <Parameter Name="filename" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="fileshort" Type="System.String" DbType="VarChar(500)" />
+    <ElementType Name="ReportLoadResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="[File]" Member="File" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" />
+      <Column Name="CompressFile" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ReportSave" Method="ReportSave">
+    <Parameter Name="filename" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="fileshort" Type="System.String" DbType="VarChar(500)" />
+    <ElementType Name="ReportSaveResult">
+      <Column Name="" Member="Column1" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
